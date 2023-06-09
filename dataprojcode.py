@@ -422,17 +422,6 @@ def process_dataframe(df2):
     df2['hascamera'] = np.where(df2['count'].isnull(), False, True)
     df2['Date'] = df2['month'].astype(str) + '/' + df2['year'].astype(str)
 
-    df2 = df2[df2['Date'] != '3/2023']
-    df2 = df2[df2['Date'] != '4/2023']
-    df2 = df2[df2['Date'] != '5/2023']
-    df2 = df2[df2['Date'] != '6/2023']
-    df2 = df2[df2['Date'] != '7/2023']
-    df2 = df2[df2['Date'] != '8/2023']
-    df2 = df2[df2['Date'] != '9/2023']
-    df2 = df2[df2['Date'] != '10/2023']
-    df2 = df2[df2['Date'] != '11/2023']
-    df2 = df2[df2['Date'] != '12/2023']
-
     df2['street_x'] = df2['street_x'].str.replace('+', '&')
     df2 = df2[df2['street_x'].str.contains('&') == True]
 
